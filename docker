@@ -2,3 +2,10 @@
   解决： $ systemctl daemon-reload
         $ sudo service docker restart
         $ sudo service docker status (should see active (running))
+
+2、docker build报错：Step 10/11 : COPY --from=0 /go/src/github.com/qmessenger/pepperbus/httpworker .
+                    ERROR: Service 'golang-worker' failed to build: Unknown flag: from
+   解决：更新docker版本
+   
+3、docker login报错：Error saving credentials: error storing credentials - err: exit status 1, out: `The connection is closed`
+   解决：sudo apt purge golang-docker-credential-helpers
