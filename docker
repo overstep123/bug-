@@ -1,0 +1,4 @@
+1、centos系统安装docker后无法运行，报错：docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running
+  解决： $ systemctl daemon-reload
+        $ sudo service docker restart
+        $ sudo service docker status (should see active (running))
