@@ -9,3 +9,10 @@
    
 3、docker login报错：Error saving credentials: error storing credentials - err: exit status 1, out: `The connection is closed`
    解决：sudo apt purge golang-docker-credential-helpers
+
+4、docker启动镜像时报错：': No such file or directory
+   原因：启动脚本格式有误，执行出错
+   解决： vim shellarr.sh打开脚本，ctrl+c进入输入：命令的格式，输入：set ff?,查看格式是否是fileformat=unix
+           如果不是，设置成unix
+           :set ff=unix后保存（：wq）即可
+           
