@@ -16,3 +16,6 @@
            如果不是，设置成unix
            :set ff=unix后保存（：wq）即可
            
+5、docker-compose up报错：ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+   原因：没有权限
+   解决：sudo
